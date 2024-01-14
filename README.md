@@ -32,7 +32,7 @@ pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-pyt
 5. Run the script:
 
 ```bash
-python3 gsc_download_script.py
+python3 gsc_download_data.py
 ```
 
 ### Running on Windows
@@ -41,5 +41,5 @@ python3 gsc_download_script.py
 5. Run the script:
 
 ```bash
-python gsc_download_script.py
+python gsc_download_data.py
 ```
