@@ -1,50 +1,42 @@
 # Google Search Console Data Downloader
 
-## Descripción
+## Description
 
-Este script en Python utiliza la API de Google Search Console para descargar datos de rendimiento de búsqueda y guardarlos en un archivo CSV. El script permite especificar el dominio, la cantidad de días de datos históricos a recuperar, y el nombre del archivo de credenciales.
+This Python script utilizes the Google Search Console API to download search performance data and save it to a CSV file. The script allows specifying the domain, the number of historical days of data to retrieve, and the credentials file name.
 
-## Requisitos
+## Requirements
 
-- Python 3.x
-- Librerías necesarias: \`google-auth\`, \`google-auth-oauthlib\`, \`google-auth-httplib2\`, \`google-api-python-client\`
+- Python
+- Required libraries: \`google-auth\`, \`google-auth-oauthlib\`, \`google-auth-httplib2\`, \`google-api-python-client\`
 
-Puedes instalar las dependencias ejecutando:
+You can install the dependencies by running:
 \`\`\`bash
 pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
 \`\`\`
 
-## Configuración
+## Configuration
 
-- **GSC_JSON_FILE:** Ruta al directorio que contiene el archivo JSON de credenciales de Google Search Console.
-- **OUTPUT_FILE_NAME:** Nombre del archivo CSV de salida que contendrá los datos descargados.
+- **GSC_JSON_FILE:** Path to the directory containing the Google Search Console credentials JSON file.
+- **OUTPUT_FILE_NAME:** Output CSV file name that will contain the downloaded data.
 
-## Uso
+## Usage
 
-1. Asegúrate de tener las dependencias instaladas.
-2. Coloca el archivo JSON de credenciales de Google Search Console en la ubicación especificada por \`GSC_JSON_FILE\`.
-3. Configura los parámetros de ejecución como el dominio (\`DOMAIN\`), la cantidad de días históricos (\`DAYS_AGO\`), y el nombre del archivo de credenciales (\`CREDENTIALS_FILE_NAME\`).
-4. Ejecuta el script:
+1. Make sure you have the dependencies installed.
+2. Place the Google Search Console credentials JSON file in the location specified by \`GSC_JSON_FILE\`.
+3. Configure the execution parameters such as the domain (\`DOMAIN\`), the number of historical days (\`DAYS_AGO\`), and the credentials file name (\`CREDENTIALS_FILE_NAME\`).
+
+### Running on Linux
+
+4. Open a terminal and navigate to the script's directory.
+5. Run the script:
    \`\`\`bash
-   python tu_script.py
+   python3 gsc_download_script.py
    \`\`\`
 
-## Contribución
+### Running on Windows
 
-Si deseas contribuir, ¡estamos abiertos a sugerencias y mejoras! Por favor, sigue las pautas de contribución.
-
-## Licencia
-
-Este script está bajo la Licencia MIT. Consulta el archivo \`LICENSE\` para obtener más detalles.
-
-## Autor
-
-[Nombre del Autor]
-
-## Agradecimientos
-
-Agradecimientos a las bibliotecas y herramientas de Google utilizadas en este script.
-
-## Notas Adicionales
-
-Cualquier información adicional que sea relevante para el usuario o el desarrollo del script.
+4. Open a Command Prompt or PowerShell and navigate to the script's directory.
+5. Run the script:
+   \`\`\`bash
+   python gsc_download_script.py
+   \`\`\`
