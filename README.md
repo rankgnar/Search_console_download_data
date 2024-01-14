@@ -1,19 +1,16 @@
 # Google Search Console Data Downloader
 
-## Description
+## Installation
 
-This Python script utilizes the Google Search Console API to download search performance data and save it to a CSV file. The script allows specifying the domain, the number of historical days of data to retrieve, and the credentials file name.
+1. Clone the repository
+2. Navigate to the project directory: `cd your_project`
+3. Create a virtual environment: `python -m venv venv`
+4. Activate the virtual environment:
+   - On Windows: `venv\Scripts\activate`
+   - On Linux/Mac: `source venv/bin/activate`
+5. Install dependencies: `pip install -r requirements.txt`
 
-## Requirements
-
-- Python
-- Required libraries: \`google-auth\`, \`google-auth-oauthlib\`, \`google-auth-httplib2\`, \`google-api-python-client\`
-
-You can install the dependencies by running:
-
-```bash
-pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-```
+````
 
 ## Configuration
 
@@ -33,7 +30,7 @@ pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-pyt
 
 ```bash
 python3 gsc_download_data.py
-```
+````
 
 ### Running on Windows
 
