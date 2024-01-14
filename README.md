@@ -10,9 +10,10 @@ This Python script utilizes the Google Search Console API to download search per
 - Required libraries: \`google-auth\`, \`google-auth-oauthlib\`, \`google-auth-httplib2\`, \`google-api-python-client\`
 
 You can install the dependencies by running:
-\`\`\`
+
+```bash
 pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-\`\`\`
+```
 
 ## Configuration
 
@@ -29,14 +30,16 @@ pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-pyt
 
 4. Open a terminal and navigate to the script's directory.
 5. Run the script:
-   \`\`\`
-   python3 gsc_download_script.py
-   \`\`\`
+
+```bash
+python3 gsc_download_script.py
+```
 
 ### Running on Windows
 
 4. Open a Command Prompt or PowerShell and navigate to the script's directory.
 5. Run the script:
-   \`\`\`
-   python gsc_download_script.py
-   \`\`\`
+
+```bash
+python gsc_download_script.py
+```
