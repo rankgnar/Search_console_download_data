@@ -10,8 +10,6 @@
    - On Linux/Mac: `source venv/bin/activate`
 5. Install dependencies: `pip install -r requirements.txt`
 
-````
-
 ## Configuration
 
 - **GSC_JSON_FILE:** Path to the directory containing the Google Search Console credentials JSON file.
@@ -30,7 +28,7 @@
 
 ```bash
 python3 gsc_download_data.py
-````
+```
 
 ### Running on Windows
 
