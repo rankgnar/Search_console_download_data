@@ -5,13 +5,11 @@ import os
 import csv
 import datetime
 
-# Configuration
+
 GSC_JSON_FILE = "path/to/gsc/json/files"
 OUTPUT_FILE_NAME = "output.csv"
 
-# Functions
 
-# Prepare Google Search Console credentials
 def prepare_credentials_gsc(credentials_file_name):
     oauth_json_file = os.path.join(GSC_JSON_FILE, credentials_file_name)
     with open(oauth_json_file, 'r') as json_file:
@@ -19,18 +17,18 @@ def prepare_credentials_gsc(credentials_file_name):
     creds = Credentials.from_authorized_user_info(creds)
     return creds
 
-# Create Google Search Console service
+
 def create_webmasters_service(creds):
     return build('webmasters', 'v3', credentials=creds)
 
-# Download data from Google Search Console
+
 def download_data_gsc(credentials_file_name, domain, days_ago=7):
     creds = prepare_credentials_gsc(credentials_file_name)
     service = create_webmasters_service(creds)
     data = get_data_gsc(service, domain, days_ago)
     save_data(data)
 
-# Get data from Google Search Console
+
 def get_data_gsc(service, domain, days_ago):
     request = {
         'startDate': (datetime.date.today() - datetime.timedelta(days_ago)).strftime('%Y-%m-%d'),
@@ -46,7 +44,7 @@ def get_data_gsc(service, domain, days_ago):
 
     return response["rows"]
 
-# Save data to CSV file
+
 def save_data(data):
     columns = ['URL', 'Keyword', 'Clicks', 'Impressions', 'CTR', 'Position']
     processed_data = process_data_gsc(data, columns)
@@ -56,7 +54,7 @@ def save_data(data):
         writer.writerow(columns)
         writer.writerows(processed_data)
 
-# Process data for CSV
+
 def process_data_gsc(rows, columns):
     processed_data = []
     for row in rows:
